@@ -18,14 +18,14 @@
     },
     "helmet#hidePoweredBy": {},
     "helmet#ieNoOpen": {},
-    "helmet#noSniff": {} ,
+    "helmet#noSniff": {},
     "helmet#noCache": {
       "enabled": false
     },
     "cors": {
       "params": {
-        "origin": false,
-        "credentials": false,
+        "origin": true,
+        "credentials": true,
         "maxAge": 86400
       }
     }
