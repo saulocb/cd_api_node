@@ -8,9 +8,6 @@
 const loopback = require('loopback');
 const boot = require('loopback-boot');
 
-var express = require('express')
-var appExpress = express()
-
 const app = module.exports = loopback();
 
 app.start = function() {
@@ -26,11 +23,6 @@ app.start = function() {
   });
 };
 
-
-appExpress.get(function (req, res) {
-  res.send('hello world')
-})
-
 // Bootstrap the application, configure models, datasources and middleware.
 // Sub-apps like REST API are mounted via boot scripts.
 boot(app, __dirname, function(err) {
@@ -39,9 +31,4 @@ boot(app, __dirname, function(err) {
   // start the server if `$ node server.js`
   if (require.main === module)
     app.start();
-});
-
-
-app.use('api/shifts', function(req, res, next) {
-  res.json({ running: true });
 });
