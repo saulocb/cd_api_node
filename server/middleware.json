@@ -18,7 +18,7 @@
     },
     "helmet#hidePoweredBy": {},
     "helmet#ieNoOpen": {},
-    "helmet#noSniff": {},
+    "helmet#noSniff": {} ,
     "helmet#noCache": {
       "enabled": false
     },
