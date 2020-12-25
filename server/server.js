@@ -7,8 +7,10 @@
 
 const loopback = require('loopback');
 const boot = require('loopback-boot');
+var cors = require('cors')
 
 const app = module.exports = loopback();
+app.use(cors())
 
 app.start = function() {
   // start the web server
