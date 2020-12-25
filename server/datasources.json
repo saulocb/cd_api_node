@@ -1,12 +1,24 @@
 {
-  "saulodb": {
-    "host": "r6ze0q02l4me77k3.chr7pe7iynqr.eu-west-1.rds.amazonaws.com",
-    "port": 3306,
-    "url": "mysql://i2t0188gmmokeq72:fvhtmgvueu10rg9q@r6ze0q02l4me77k3.chr7pe7iynqr.eu-west-1.rds.amazonaws.com/uvp1uzf0gydjkfpc",
-    "database": "uvp1uzf0gydjkfpc",
-    "password": "fvhtmgvueu10rg9q",
-    "name": "saulodb",
-    "user": "i2t0188gmmokeq72",
-    "connector": "mysql"
+  "db": {
+    "host": "cluster0.lmhwe.mongodb.net",
+    "port": 27017,
+    "url": "mongodb+srv://saulo123:saulo123@cluster0.lmhwe.mongodb.net/test",
+    "database": "test",
+    "password": "saulo123",
+    "name": "bouncerdb",
+    "user": "saulo123",
+    "useNewUrlParser": true,
+    "connector": "mongodb"
+  },
+  "bouncerdb": {
+    "host": "cluster0.lmhwe.mongodb.net",
+    "port": 27017,
+    "url": "mongodb+srv://saulo123:saulo123@cluster0.lmhwe.mongodb.net/test",
+    "database": "test",
+    "password": "saulo123",
+    "name": "bouncerdb",
+    "user": "saulo123",
+    "useNewUrlParser": true,
+    "connector": "mongodb"
   }
 }
