@@ -22,6 +22,7 @@ const app = module.exports = loopback();
 
 
 app.use('*', cors(corsOptions),  function (req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', '*');
   next()
 })
 
