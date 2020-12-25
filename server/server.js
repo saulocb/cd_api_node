@@ -10,7 +10,7 @@ var cors = require('cors')
 
 
 var corsOptions = {
-  origin: 'https://studying-react.vercel.app'
+  origin: 'https://studying-react.vercel.app/home'
 }
 
 const app = module.exports = loopback();
@@ -21,8 +21,8 @@ const app = module.exports = loopback();
 // })
 
 
-app.use('*', cors(corsOptions),  function (req, res, next) {
-  res.setHeader('Access-Control-Allow-Origin', 'https://studying-react.vercel.app');
+app.use(cors(corsOptions),  function (req, res, next) {
+  res.setHeader('Access-Control-Allow-Origin', 'https://studying-react.vercel.app/home');
   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE');
   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type');
   res.setHeader('Access-Control-Allow-Credentials', true);
