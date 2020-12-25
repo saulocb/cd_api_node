@@ -10,7 +10,7 @@ var cors = require('cors')
 
 
 var corsOptions = {
-  origin: 'https://studying-react.vercel.app/'
+  origin: 'https://studying-react.vercel.app'
 }
 
 const app = module.exports = loopback();
