@@ -10,20 +10,20 @@ var cors = require('cors')
 
 
 var corsOptions = {
-  origin: '*',
+  origin: 'https://studying-react-e637ugns5.vercel.app/'
 }
 
 const app = module.exports = loopback();
 // app.use(cors())
 
-app.get('*', cors(),  function (req, res, next) {
-  res.json({msg: 'This is CORS-enabled for all origins!'})
-})
-
-
-// app.use('*', function (req, res, next) {
+// app.get('*', cors(),  function (req, res, next) {
 //   res.json({msg: 'This is CORS-enabled for all origins!'})
 // })
+
+
+app.use('*', cors(corsOptions),  function (req, res, next) {
+  res.json({msg: 'This is CORS-enabled for all origins!'})
+})
 
 
 
