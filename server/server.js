@@ -4,13 +4,31 @@
 // License text available at https://opensource.org/licenses/MIT
 
 'use strict';
-
+const express = require('express');
 const loopback = require('loopback');
 const boot = require('loopback-boot');
 var cors = require('cors')
+const appp = express();
+
+
+var corsOptions = {
+  origin: 'https://studying-react-e637ugns5.vercel.app',
+  optionsSuccessStatus: 200 // some legacy browsers (IE11, various SmartTVs) choke on 204
+}
 
 const app = module.exports = loopback();
 app.use(cors())
+
+app.get('*',cors(corsOptions), function (req, res, next) {
+  res.json({msg: 'This is CORS-enabled for all origins!'})
+})
+
+
+app.use('*',cors(corsOptions), function (req, res, next) {
+  res.json({msg: 'This is CORS-enabled for all origins!'})
+})
+
+
 
 app.start = function() {
   // start the web server
