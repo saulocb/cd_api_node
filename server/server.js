@@ -6,26 +6,8 @@
 'use strict';
 const loopback = require('loopback');
 const boot = require('loopback-boot');
-const { createProxyMiddleware } = require('http-proxy-middleware');
-// var cors = require('cors')
+//var cors = require('cors')
 
-
-const options = {
-  target: 'https://studying-react.vercel.app', // target host
-  changeOrigin: true, // needed for virtual hosted sites
-  ws: true, // proxy websockets
-  pathRewrite: {
-    '^/api/old-path': '/api/new-path', // rewrite path
-    '^/api/remove/path': '/path', // remove base path
-  },
-  router: {
-    // when request.headers.host == 'dev.localhost:3000',
-    // override target 'http://www.example.org' to 'http://localhost:8000'
-    'dev.localhost:3000': 'https://api-saulo-cv.herokuapp.com',
-  },
-};
-
-const exampleProxy = createProxyMiddleware(options);
 
 var corsOptions = {
   origin: '*',
@@ -33,7 +15,7 @@ var corsOptions = {
 }
 
 const app = module.exports = loopback();
-// app.use('*', exampleProxy);
+
 
 // app.get('*', cors(),  function (req, res, next) {
 //   res.json({msg: 'This is CORS-enabled for all origins!'})
