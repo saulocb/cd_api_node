@@ -10,7 +10,8 @@ var cors = require('cors')
 
 
 var corsOptions = {
-  origin: '*'
+  origin: '*',
+  Methods: 'GET, POST, OPTIONS, PUT, PATCH, DELETE'
 }
 
 const app = module.exports = loopback();
