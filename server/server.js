@@ -33,7 +33,7 @@ var corsOptions = {
 }
 
 const app = module.exports = loopback();
-app.use('*', exampleProxy);
+// app.use('*', exampleProxy);
 
 // app.get('*', cors(),  function (req, res, next) {
 //   res.json({msg: 'This is CORS-enabled for all origins!'})
