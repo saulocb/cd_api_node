@@ -15,20 +15,20 @@ var corsOptions = {
 }
 
 const app = module.exports = loopback();
-// app.use(cors())
+app.use(cors(corsOptions))
 
 // app.get('*', cors(),  function (req, res, next) {
 //   res.json({msg: 'This is CORS-enabled for all origins!'})
 // })
 
 
-app.use(cors(corsOptions),  function (req, res, next) {
-  res.setHeader('Access-Control-Allow-Origin', '*');
-  res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE'); // If needed
-  res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type'); // If needed
-  res.setHeader('Access-Control-Allow-Credentials', true); // If needed
-  next()
-})
+// app.use(cors(corsOptions),  function (req, res, next) {
+//   res.setHeader('Access-Control-Allow-Origin', '*');
+//   res.setHeader('Access-Control-Allow-Methods', 'GET, POST, OPTIONS, PUT, PATCH, DELETE'); // If needed
+//   res.setHeader('Access-Control-Allow-Headers', 'X-Requested-With,content-type'); // If needed
+//   res.setHeader('Access-Control-Allow-Credentials', true); // If needed
+//   next()
+// })
 
 
 
