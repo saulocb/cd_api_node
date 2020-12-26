@@ -11,7 +11,7 @@ const { createProxyMiddleware } = require('http-proxy-middleware');
 
 
 const options = {
-  target: 'https://api-saulo-cv.herokuapp.com', // target host
+  target: 'https://studying-react.vercel.app', // target host
   changeOrigin: true, // needed for virtual hosted sites
   ws: true, // proxy websockets
   pathRewrite: {
