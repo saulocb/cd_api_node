@@ -15,7 +15,7 @@ var corsOptions = {
 }
 
 const app = module.exports = loopback();
-// app.use(cors(corsOptions))
+
 
 // app.get('*', cors(),  function (req, res, next) {
 //   res.json({msg: 'This is CORS-enabled for all origins!'})
@@ -34,6 +34,7 @@ const app = module.exports = loopback();
 
 app.start = function() {
   // start the web server
+  app.use(cors(corsOptions))
   return app.listen(function() {
     app.emit('started');
     const baseUrl = app.get('url').replace(/\/$/, '');
