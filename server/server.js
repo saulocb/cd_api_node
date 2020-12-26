@@ -6,7 +6,7 @@
 'use strict';
 const loopback = require('loopback');
 const boot = require('loopback-boot');
-var cors = require('cors')
+// var cors = require('cors')
 
 
 var corsOptions = {
@@ -34,7 +34,6 @@ const app = module.exports = loopback();
 
 app.start = function() {
   // start the web server
-  app.use(cors(corsOptions))
   return app.listen(function() {
     app.emit('started');
     const baseUrl = app.get('url').replace(/\/$/, '');
