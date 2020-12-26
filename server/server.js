@@ -21,7 +21,7 @@ const options = {
   router: {
     // when request.headers.host == 'dev.localhost:3000',
     // override target 'http://www.example.org' to 'http://localhost:8000'
-    'dev.localhost:3000': 'http://localhost:3000',
+    'dev.localhost:3000': 'https://api-saulo-cv.herokuapp.com',
   },
 };
 
