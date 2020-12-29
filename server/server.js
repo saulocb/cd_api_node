@@ -6,7 +6,7 @@
 'use strict';
 const loopback = require('loopback');
 const boot = require('loopback-boot');
-//var cors = require('cors')
+var cors = require('cors')
 
 
 var corsOptions = {
@@ -15,7 +15,7 @@ var corsOptions = {
 }
 
 const app = module.exports = loopback();
-
+app.use(cors())
 
 // app.get('*', cors(),  function (req, res, next) {
 //   res.json({msg: 'This is CORS-enabled for all origins!'})
