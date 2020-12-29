@@ -15,7 +15,6 @@ var corsOptions = {
 }
 
 const app = module.exports = loopback();
-app.use(cors())
 
 // app.get('*', cors(),  function (req, res, next) {
 //   res.json({msg: 'This is CORS-enabled for all origins!'})
