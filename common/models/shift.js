@@ -5,7 +5,7 @@ module.exports = function (Shift) {
     const token = ctx.options && ctx.options.accessToken;
     const userId = token && token.userId;
     ctx.instance.$userId = userId
-    next();
+   return next();
   });
 
 
